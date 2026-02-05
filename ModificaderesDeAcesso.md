@@ -8,4 +8,4 @@
   um módulo diferente que não exporte o pacote onde ele está)
 
 # Exemplo de modificadores de acesso em Java
-![img modificadores](EstudoJAVA\imgs\modificadores.png)
+![img modificadores](EstudoJAVA\imgs\Modificadores.png)
