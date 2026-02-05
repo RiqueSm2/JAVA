@@ -1,6 +1,11 @@
 package Strings;
+
+import java.util.Scanner;
+
 public class Strings {
        public static void main(String[] args) {
+
+    Scanner sc = new Scanner(System.in);
 
     String original = "  abcde FGHIJ ABC abc DEFG   ";
 
@@ -26,6 +31,10 @@ public class Strings {
 
     original.equals("s"); /*comparando strings Ex.: se original for igual a "s" */
 
+    char response = sc.next().charAt(0); /*Pegando a primeira letra digitada na posição 0, o .charAt é necessario pos o sc.next le uma string e a variavel é char*/
+    /* char é um tipo primitivo, por isso não possui o método equals() */
+
+
     System.out.println("Original: " + original);
     
     System.out.println("ToUpperCase: " + s1);
@@ -47,7 +56,10 @@ public class Strings {
     System.out.println("Last index of 'bc': " + b);
 
     System.out.println("Palavra no vetor 0: " + vect[0]);
-        
+    
+    System.out.println("Letra na posição 0: " + response);
+
+    sc.close();
     }
     
 }

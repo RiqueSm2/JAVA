@@ -20,13 +20,14 @@ public class Bank {
        
      /*------------------------------------------ */
      System.out.println("Is there initial deposit (y/n): ");
-     String initial = sc.nextLine();
-     if (initial.equals("y")){
+     char response = sc.next().charAt(0); /*Pegando a primeira letra digitada na posição 0*/
+     /* char é um tipo primitivo, por isso não possui o método equals() */
+       if (response == 'y'){
        System.out.println("Enter initial deposit value: ");
        double deposit = sc.nextDouble(); 
        bc = new BankAccount(numberAccount, name, deposit);
        
-     } else if (initial.equals("n")){
+     } else if (response == 'n'){
        bc= new BankAccount(numberAccount, name);
      } else {
             System.out.println("Digite apenas s ou n");
@@ -40,7 +41,7 @@ public class Bank {
      System.out.println("Enter a deposit value: ");
      double deposit = sc.nextDouble();
      sc.nextLine();
-     bc.setDeposit(deposit);
+     bc.deposit(deposit);
      System.out.println("Update account data: " + bc.toString());
      System.out.println(" ");
      /*------------------------------------------ */
@@ -48,7 +49,7 @@ public class Bank {
      System.out.println("Enter a withdraw value: ");
      double withdraw = sc.nextInt();
      sc.nextLine();
-     bc.setWithdraw(withdraw);
+     bc.withdraw(withdraw);
      System.out.println("Update account data: " + bc.toString());
 
 

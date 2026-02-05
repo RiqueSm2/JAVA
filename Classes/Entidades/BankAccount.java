@@ -2,22 +2,25 @@ package Classes.Entidades;
 
 public class BankAccount {
 
+/*Numero da conta e o saldo não podem ser alterados - não criar setters */
+
+
 private int numberAccount;
-public String holderName;
+private String holderName;
 private double bankBalance;
 
 /*Sobrecargas*/
-public BankAccount(){
-}
-public BankAccount(int numberAccount, String holderName, double bankBalance){
-    this.numberAccount = numberAccount;
-    this.holderName = holderName;
-    this.bankBalance = bankBalance;   
-}
+
 public BankAccount(int numberAccount, String holderName){
     this.numberAccount = numberAccount;
     this.holderName = holderName;
     this.bankBalance = 0.00;  
+}
+
+public BankAccount(int numberAccount, String holderName, double inicitialDeposit){
+    this.numberAccount = numberAccount;
+    this.holderName = holderName;
+    deposit(inicitialDeposit);  /*Encapsulamento: A regra de negocio está no metodo */ 
 }
 
 
@@ -27,22 +30,20 @@ public BankAccount(int numberAccount, String holderName){
 public int getNumberAccount(){
     return numberAccount;
 }  
-public void setNumberAccount(int numberAccount){
-  this.numberAccount =  numberAccount; 
-}
+
 /*------------------------------------------ */
 
-public void holderName(String name){
+public void setHoldername(String name){
     this.holderName = name;
 }
 
 
 /*------------------------------------------ */
 
-public void setDeposit(double deposit){
+public void deposit(double deposit){
     this.bankBalance += deposit;
 }
-public void setWithdraw (double withdraw){
+public void withdraw (double withdraw){
     this.bankBalance -= (withdraw + 5);
 
 }
