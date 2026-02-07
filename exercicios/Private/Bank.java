@@ -1,4 +1,4 @@
-package exercicios;
+package exercicios.Private;
 import java.util.Scanner;
 
 import Classes.Entidades.BankAccount;
