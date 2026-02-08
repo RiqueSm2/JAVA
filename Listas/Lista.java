@@ -9,9 +9,10 @@ public class Lista {
     Scanner sc = new Scanner(System.in);
 
     List<String> lista = new ArrayList<>(); /* dentro de < > definimos o tipo da lista, integer, string.. */
-    String palavra = sc.nextLine();
+   
 
     System.out.println("Digite uma palavra: ");
+    String palavra = sc.nextLine();
     lista.add(palavra); /*adiciona o valor da variavel palavra na lista*/
     lista.add("Maçã");
     lista.add("Banana");
@@ -30,7 +31,9 @@ public class Lista {
     int posicao;
     posicao = lista.indexOf("Uva");
     System.out.println(posicao); /*Se não achar retorna -1 */
-
+     
+    int divisão = 9 / lista.size();
+    System.out.println(divisão);
     
     sc.close();
 
