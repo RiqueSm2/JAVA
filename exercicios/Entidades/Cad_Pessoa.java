@@ -2,7 +2,7 @@ package exercicios.Entidades;
 
 import java.util.ArrayList;
 import java.util.List;
-
+/*IMPORTANTE LEMBRAR, SEMPRE TRABALHAR COM OBJETOS DO MESMO TIPO */
 public class Cad_Pessoa {
 /*Transformando o cad_pessoa em estatico para não ser necessario instanciar*/
 private static List<Pessoa> cadastro = new ArrayList<>();
@@ -74,7 +74,7 @@ List<String> menores = new ArrayList<>();
 }
 
 
-public static double media_Altura(){
+public static double mediaAltura(){
 double soma = 0;
 for(Pessoa p : cadastro){
 soma+=p.getAltura();  
@@ -83,5 +83,18 @@ return soma/cadastro.size();
 }
 
 
+
+
+public static String maisVelha(){
+ 
+ Pessoa maisVelha = cadastro.get(0); /*Pegando a primeira pessoa do cadastro*/
+
+ for (Pessoa p : cadastro){
+   if (p.getIdade() > maisVelha.getIdade()) { /*Se a idade de p foi maior que a ideade de maisVelha */
+        maisVelha = p; // atualiza para a pessoa mais velha
+ }
+ }
+   return maisVelha.getNome();
+ }
 
 }

@@ -31,7 +31,7 @@ public class Strings {
 
     original.equals("s"); /*comparando strings Ex.: se original for igual a "s" */
 
-    char response = sc.next().charAt(0); /*Pegando a primeira letra digitada na posição 0, o .charAt é necessario pos o sc.next le uma string e a variavel é char*/
+    char response = sc.next().charAt(0); /*Pegando a primeira letra digitada na posição 0, o .charAt é necessario pois o sc.next le uma string e a variavel é char*/
     /* char é um tipo primitivo, por isso não possui o método equals() */
 
 

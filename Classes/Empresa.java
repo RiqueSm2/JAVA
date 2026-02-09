@@ -12,6 +12,7 @@ public class Empresa{
         
         Scanner sc = new Scanner(System.in);
         Employee_EMPRESA emp = new Employee_EMPRESA();
+        
         System.out.printf("Nome: ");
         emp.name = sc.nextLine();
 

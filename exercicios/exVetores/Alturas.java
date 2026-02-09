@@ -22,7 +22,7 @@ public class Alturas {
         String name = sc.nextLine();
         System.out.printf("Idade: ");
         int idade = sc.nextInt();
-        System.out.printf("Altura: ");
+        System.out.printf("%n Altura: ");
         double altura = sc.nextDouble();
         Pessoa p = new Pessoa(name,idade,altura);
         Cad_Pessoa.adicionarPessoa(p);   
@@ -30,7 +30,7 @@ public class Alturas {
         }
         System.out.println("");
         
-        System.out.printf("Altura média: %.2f %n", Cad_Pessoa.media_Altura());
+        System.out.printf("Altura média: %.2f %n", Cad_Pessoa.mediaAltura());
         System.out.printf("Pessoas com menos de 16 anos: %.1f%% %n", Cad_Pessoa.getPercentMenoresDe16() );
         /*Usando for para não imprimir os nomes entre colchetes */
         for (String nome : Cad_Pessoa.getMenoresDe16()) {
