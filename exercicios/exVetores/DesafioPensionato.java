@@ -1,11 +1,49 @@
 package exercicios.exVetores;
 
 import java.util.Scanner;
+import exercicios.Entidades.Rent;
 
 public class DesafioPensionato {
     public static void main(String[] args) {
         
-    Scanner sc = new Scanner(System.in);
+   Scanner sc = new Scanner(System.in);
+   Rent[] vect = new Rent[10]; /*Vetor de objetos Rent*/
+   
+
+   System.out.println("How many rooms wil be rented? ");
+   int renteds = sc.nextInt();
+   
+
+   for(int i = 0; i < renteds; i++){
+     sc.nextLine();
+     System.out.println("Rent #" + (i+1) + ":");
+     System.out.print("Name: ");
+     String name = sc.nextLine();
+     System.out.print("Email: ");
+     String email = sc.nextLine();
+     System.out.print("Room: ");
+     int room = sc.nextInt();
+
+     vect[room] = new Rent(name,email); /*Instanciando e passando o objeto para o vetor */
+   }
+    
+    System.out.println("Busy rooms: ");
+    for(int i = 0; i < 10; i++){
+     if(vect[i] != null){
+      System.out.println(i + ": " + vect[i]);
+
+     }
+
+
+    }
+  
+    sc.close();
+
+
+
+
+
+    /*Scanner sc = new Scanner(System.in);
     String[] quartos = new String[9];
     String[] name = new String[9];
     String[] email = new String[9];
@@ -28,7 +66,7 @@ public class DesafioPensionato {
 
      name[room] = nam;
      email[room] = ema;
-     quartos[room] = Integer.toString(room); /*Transformando o int em uma string */   
+     quartos[room] = Integer.toString(room); /*Transformando o int em uma string   
     
      
     }
@@ -40,7 +78,7 @@ public class DesafioPensionato {
      }      
 
     }
-    sc.close();
+    sc.close(); */
     }
     
 }
