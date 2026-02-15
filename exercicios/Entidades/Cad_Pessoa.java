@@ -37,6 +37,7 @@ public static void listarMenoresDe16(){
 List<String> menor = new ArrayList<>();
 
  for (Pessoa p : cadastro){
+  
   if (p.getIdade() < 16){
     menor.add(p.getNome());
     }
