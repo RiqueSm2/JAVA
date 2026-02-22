@@ -25,11 +25,11 @@ public class Exercicio1 {
    for(Employer x : list){
     if(x.getId() == id){
       System.out.println("Esse ID ja existe!");
-
       sc.close();
       return;
     }
      }//fim do forEach
+     
    sc.nextLine();
    System.out.print("Name: ");
    String name = sc.nextLine();

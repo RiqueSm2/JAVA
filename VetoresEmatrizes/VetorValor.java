@@ -1,4 +1,4 @@
-package Vetores;
+package VetoresEmatrizes;
 
 import java.util.Scanner;
 

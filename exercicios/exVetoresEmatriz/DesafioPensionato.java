@@ -1,4 +1,4 @@
-package exercicios.exVetores;
+package exercicios.exVetoresEmatriz;
 
 import java.util.Scanner;
 import exercicios.Entidades.Rent;
