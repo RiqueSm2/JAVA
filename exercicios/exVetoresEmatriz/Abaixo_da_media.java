@@ -23,7 +23,7 @@ public class Abaixo_da_media {
         numeros[i] += num;
         soma += num;
         }
-
+        
         double media = soma / numeros.length;
           
         System.out.printf("MEDIA DO VETOR = %.3f %n", media);
