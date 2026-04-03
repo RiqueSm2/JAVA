@@ -59,7 +59,33 @@ public class Strings {
     
     System.out.println("Letra na posição 0: " + response);
 
+        /*Se usar o + para concatenar as Strings, se for muito grande o programa fica lento
+    por isso usamos o StringBuilder  
+
+    public String toString(){
+      *StringBuilder permite concatenar String utilizando a função append 
+
+       StringBuilder sb = new StringBuilder();
+       sb.append(title + "\n");
+       sb.append(likes);
+       sb.append("Likes - ");
+       sb.append(sdf.format(moment) + "\n");
+       sb.append(content + "\n");
+       sb.append("Comments:\n");
+       for (Comment c : comments){
+        sb.append(c.getText() + "\n");
+       }
+        *getText() pega o valor digitado, sempre retorna uma String 
+
+       
+       return sb.toString();
+    } */
+
+
+
+
     sc.close();
-    }
+
+       }
     
 }
